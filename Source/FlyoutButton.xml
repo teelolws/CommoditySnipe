@@ -1,0 +1,7 @@
+<Ui>
+    <CheckButton name="CommoditySnipeFlyoutButton">
+		<Size x="16" y="32"/>
+		<NormalTexture file="Interface\PaperDollInfoFrame\UI-GearManager-FlyoutButton"/>
+		<HighlightTexture file="Interface\PaperDollInfoFrame\UI-GearManager-FlyoutButton"/>
+	</CheckButton>
+</Ui>

@@ -1,0 +1,73 @@
+<Ui>
+    <Frame name="CommoditySnipeFlyoutFrame" inherits="TooltipBackdropTemplate" hidden="true" parent="CommoditySnipeFlyoutButton" parentKey="ToolSelection">
+        <Size x="160" y="150"/>
+        <Anchors>
+            <Anchor point="TOPLEFT" relativePoint="TOPRIGHT"/>
+        </Anchors>
+		<KeyValues>
+			<KeyValue key="backdropColor" value="BLACK_FONT_COLOR" type="global"/>
+		</KeyValues>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString parentKey="MaxPriceLabel" inherits="GameFontNormalSmall" justifyH="LEFT" text="Max Price">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="4" y="-4"/>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+        <Frames>
+            <Frame parentKey="MoneyInputFrame" inherits="LargeMoneyInputFrameTemplate">
+				<KeyValues>
+					<KeyValue key="hideCopper" value="true" type="boolean"/>
+				</KeyValues>
+				<Size x="150" y="33"/>
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeKey="$parent.MaxPriceLabel" relativePoint="BOTTOMLEFT" x="0" y="-2"/>
+				</Anchors>
+			</Frame>
+		</Frames>
+        <Layers>
+			<Layer level="ARTWORK">
+                <FontString parentKey="SpamClickLabel" inherits="GameFontNormalSmall" justifyH="LEFT" text="Spam click this button">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativeKey="$parent.MoneyInputFrame" relativePoint="BOTTOMLEFT" x="0" y="0"/>
+                    </Anchors>
+                </FontString>
+            </Layer>
+		</Layers>
+        <Frames>
+            <Button name="CommoditySnipeButton">
+                <Size x="32" y="32"/>
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeKey="$parent.SpamClickLabel" relativePoint="BOTTOMLEFT" x="10" y="-10"/>
+                </Anchors>
+                <Layers>
+        			<Layer level="BACKGROUND">
+        				<Texture file="Interface\Buttons\UI-EmptySlot-Disabled">
+        					<Size x="45" y="45"/>
+        					<Anchors>
+        						<Anchor point="CENTER" x="0" y="-1"/>
+        					</Anchors>
+        					<TexCoords left="0.140625" right="0.84375" top="0.140625" bottom="0.84375"/>
+        				</Texture>
+        			</Layer>
+                </Layers>
+            </Button>
+        </Frames>
+        <Layers>
+            <Layer level="ARTWORK">
+                <FontString parentKey="OrMacroLabel" inherits="GameFontNormalSmall" justifyH="LEFT" text="Or spam this macro:">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativeTo="CommoditySnipeButton" relativePoint="BOTTOMLEFT" x="-10" y="-10"/>
+                    </Anchors>
+                </FontString>
+                <FontString parentKey="MacroDetailLabel" inherits="GameFontNormalSmall" justifyH="LEFT" text="/click CommoditySnipeButton">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativeKey="$parent.OrMacroLabel" relativePoint="BOTTOMLEFT"/>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+    </Frame>
+</Ui>

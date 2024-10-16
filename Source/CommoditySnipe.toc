@@ -1,0 +1,8 @@
+## Interface: 110002
+## LoadOnDemand: 1
+## LoadWith: Blizzard_AuctionHouseUI
+
+FlyoutButton.xml
+FlyoutButton.lua
+FlyoutFrame.xml
+CommoditySnipe.lua
